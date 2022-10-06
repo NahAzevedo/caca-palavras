@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <title>Caça-Palavras</title>
+  </head>
+  <body>
+    <p align="center"> <img src="img/netflix.png" width="200" align="center"></p>
+   
+  <div id="matriz">
+    <script>
+        
+      matriz = new Array;
+
+      dois = new Array;
+
+      matriz = [["A","C","A","S","A","M","O","N","S","T","R","O","I"],
+                ["B","E","E","M","O","V","I","E","S","F","H","V","B"],
+                ["O","S","S","M","U","R","F","S","H","R","E","K","O"],
+                ["M","A","D","A","G","A","S","C","A","R","R","A","I"],
+                ["I","R","U","A","S","D","F","J","C","V","B","N","A"],
+                ["N","A","F","L","P","O","M","I","N","I","O","N","S"],
+                ["A","C","A","M","I","N","H","O","D","A","L","U","A"],
+                ["V","R","U","A","S","D","F","J","C","V","B","N","A"],
+                ["E","R","A","L","O","S","C","R","O","O","D","S","E"],
+                ["L","R","U","L","A","S","A","T","R","O","L","L","S"]
+                ]; 
+
+      dois = [[1,1,1,1,1,1,1,1,1,1,1,1,0],
+              [1,1,1,1,1,1,1,1,0,0,0,0,0],
+              [1,1,1,1,1,1,1,1,1,1,1,1,0],
+              [1,1,1,1,1,1,1,1,1,1,0,0,0],
+              [1,0,0,0,0,0,0,0,0,0,0,0,0],
+              [1,0,0,0,0,0,1,1,1,1,1,1,1],
+              [1,1,1,1,1,1,1,1,1,1,1,1,1],
+              [1,0,0,0,0,0,0,0,0,0,0,0,0],
+              [1,0,0,0,1,1,1,1,1,1,1,1,0],
+              [1,0,0,0,0,0,0,1,1,1,1,1,1]
+    ];
+      document.write("<table>");       
+      for(linha = 0; linha < 10; linha++){
+        document.write("<tr>");
+
+        for(coluna = 0; coluna < 13; coluna++){
+            
+          document.write("<td id='"+ linha.toString() + '-'+ coluna.toString() +"'>" + matriz[linha][coluna] + "</td>");
+          if(dois[linha][coluna]==1){
+            document.getElementById(linha.toString() + '-' + coluna.toString()).style.background = 'red';
+            }
+        }
+        document.write("</tr>");      
+      }
+      document.write("</table>"); 
+        
+  
+    
+    </script>
+     <strike>
+      <br>
+      Shrek <br> 
+      Abominável <br>
+      Os Croods <br>
+      Trolls <br>
+      Os Smurfs <br>
+      Madagascar <br>
+      Bee Movie <br>
+      Minios <br>
+      A Casa Monstro <br>
+      A Caminho da Lua <br>
+
+    </strike>
+
+    </div>
+ 
+  </body>
+</html>
